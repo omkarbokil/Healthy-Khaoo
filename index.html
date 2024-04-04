@@ -41,9 +41,9 @@
           </div>
           <!-- Notification -->
           <div>
-               <button type="button" class="btn border position-relative notifications">
-                    Notifications
-                    <span class="badge bg-danger rounded-circle position-absolute start-100 translate-middle p-2">
+               <button type="button" class="btn border position-relative notifications" data-bs-toggle="modal" data-bs-target="#waterIntakeModal">
+                    Water Intake ?
+                    <span class="badge bg-primary rounded-circle position-absolute start-100 translate-middle p-2">
                     </span>
                </button>
           </div>
@@ -262,7 +262,7 @@
      </div>
 
      <!-- Protein Chart -->
-     <section class="container mt-5">
+     <section class="container-fluid mt-5">
           <table class="table table-hover border rounded-4 shadow-sm">
                <thead>
                     <tr>
@@ -452,41 +452,31 @@
      </section>
 
      <!-- Weight and Water Proportion -->
-     <section class="container mt-5">
-          <legend class="mb-3" style="color: #5D9332;">Weight and Water Proportion</legend>
-          <section>
-               <form class="row needs-validation">
-                    <div class="dropdown col-2">
-                         <label for="gender" class="form-label" required>Gender</label>
-                         <button class="btn border gender form-control text-start shadow-none" data-bs-toggle="dropdown">
-                              Select Gender
-                         </button>
-                         <ul class="dropdown-menu">
-                              <li class="gender-options"><a class="dropdown-item">Male</a></li>
-                              <li class="gender-options"><a class="dropdown-item">Female</a></li>
-                              <li class="gender-options"><a class="dropdown-item">Other</a></li>
-                         </ul>
+     <section class="modal mt-5" id="waterIntakeModal">
+          <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <div style="color: #5D9332;">Weight and Water Proportion</div>
                     </div>
-                    <div class="col-2">
-                         <label for="weight" class="form-label">Weight</label>
-                         <input type="number" class="form-control shadow-none" placeholder="Enter Weight" id="weight" required>
+                    <div class="modal-body">
+                         <form class="row row-gap-4 needs-validation justify-content-center">
+                              <div class="col-6">
+                                   <label for="weight" class="form-label">Weight</label>
+                                   <input type="number" class="form-control shadow-none" placeholder="Enter Weight" id="weight" required>
+                              </div>
+                              <div class="col-6">
+                                   <label for="water-intake" class="form-label">Water Intake (Ltrs)</label>
+                                   <input type="text" class="form-control shadow-none" id="water-intake" disabled>
+                              </div>
+                              <div class="col-6">
+                                   <div class="btn btn-danger form-control" id="check-water-intake" type="submit" role="button">
+                                        Check
+                                   </div>
+                              </div>
+                         </form>
                     </div>
-                    <div class="col-2">
-                         <label for="age"  class="form-label">Age</label>
-                         <input type="number" class="form-control shadow-none" placeholder="Enter age" id="age" required>
-                    </div>
-                    <div class="col-2">
-                         <label  class="form-label">&nbsp;</label>
-                         <div class="btn btn-danger form-control" id="check-water-intake" type="submit" role="button">
-                              Check
-                         </div>
-                    </div>
-                    <div class="col-4">
-                         <label for="water-intake" class="form-label">Water Intake (Ltrs)</label>
-                         <input type="text" class="form-control shadow-none" id="water-intake" disabled>
-                    </div>
-               </form>
-          </section>
+               </div>
+          </div>
      </section>
 
      <!-- Nav Tabs -->

@@ -2,6 +2,7 @@
 
 body{
      font-family: Montserrat;
+     overflow-x: hidden;
 }
 
 .navbar{
@@ -15,7 +16,7 @@ body{
 }
 
 .tagline{
-     font-size: 4rem;
+     font-size: 3.5rem;
 }
 
 .nav-items:hover{
@@ -48,9 +49,60 @@ body{
      color: #5D9332;
 }
 
-.fa-bell:hover{
-     box-shadow: 0px 1px 5px 1px rgb(149, 147, 147);
+#reminder, .notifications{
+     color: #4361ee;
+     transition: 0.2s all ease-in-out;
 }
+
+#reminder:hover , .notifications:hover{
+     background-color: #4361ee;
+     color: white;
+     transition: 0.2s all ease-in-out;
+}
+
+
+.btn_get_in_touch{
+     background-color: #5D9332;
+}
+
+.btn_get_in_touch:hover{
+     background-color: #285804;
+     /* font-weight: bold; */
+}
+
+/* Articles */
+.article_arrow{
+     color: white;
+     transition: 0.2s all ease-in-out;
+}
+
+.article_arrow:hover{
+     color: #4361ee;
+     background-color: white;
+     transition: 0.2s all ease-in-out;
+}
+
+/* Protein Chart */
+.protein-product{
+     background-color: #5D9332;
+}
+
+.footer_links{
+     color: white;
+     text-decoration: none;
+     font-size: 0.9rem;
+}
+
+.footer_links:hover{
+     color: white;
+     text-decoration: underline;
+}
+
+/* Diest Plans */
+.diet-plan-topics{
+     color: #4361ee;
+}
+
 
 /* Media Queries */
 
@@ -64,4 +116,13 @@ body{
      .tagline{
           font-size: 1rem;
      }
+}
+
+::-webkit-scrollbar{
+     height: 5px;
+     width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+     background-color: #5D9332;
 }

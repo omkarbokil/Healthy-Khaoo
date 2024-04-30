@@ -5,6 +5,18 @@ body{
      overflow-x: hidden;
 }
 
+.logo{
+     height: 100vh;
+     display: flex;
+     place-content: center;
+     place-items: center;
+}
+
+.leaf{
+     font-size: 500px;
+     color: #5D9332;
+}
+
 .navbar{
      background-color: #5D9332;
      color: white;
